@@ -149,8 +149,36 @@
         .expertise-image {
             width: 100%;
             height: 180px;
-            object-fit: cover;
-            background-color: #2a2a2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .expertise-card:nth-child(1) .expertise-image {
+            background: linear-gradient(135deg, #FF6D5A 0%, #E84855 100%);
+        }
+        
+        .expertise-card:nth-child(2) .expertise-image {
+            background: linear-gradient(135deg, #D4A574 0%, #B8860B 100%);
+        }
+        
+        .expertise-card:nth-child(3) .expertise-image {
+            background: linear-gradient(135deg, #4285F4 0%, #356ABC 100%);
+        }
+        
+        .expertise-card:nth-child(4) .expertise-image {
+            background: linear-gradient(135deg, #FF7A59 0%, #FF5C35 100%);
+        }
+        
+        .expertise-card:nth-child(5) .expertise-image {
+            background: linear-gradient(135deg, #FF9900 0%, #EC7211 100%);
+        }
+        
+        .expertise-card:nth-child(6) .expertise-image {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
         }
 
         .expertise-content {
@@ -235,11 +263,9 @@
             transform: translateY(-3px);
         }
 
-        .tool-item img {
-            width: 50px;
-            height: 50px;
+        .tool-icon {
+            font-size: 3rem;
             margin-bottom: 12px;
-            object-fit: contain;
         }
 
         .tool-name {
@@ -461,7 +487,7 @@
             <h2>Core Expertise</h2>
             <div class="expertise-grid">
                 <div class="expertise-card">
-                    <img src="https://docs.n8n.io/images/n8n-docs-icon.svg" alt="n8n Automation" class="expertise-image" style="object-fit: contain; padding: 40px; background: linear-gradient(135deg, #FF6D5A 0%, #E84855 100%);">
+                    <div class="expertise-image">⚙️</div>
                     <div class="expertise-content">
                         <h3>n8n Workflow Automation</h3>
                         <p>Build complex automation workflows that connect your entire tech stack. From lead qualification to data sync, I design and implement production-grade n8n workflows that eliminate manual processes.</p>
@@ -469,7 +495,7 @@
                 </div>
 
                 <div class="expertise-card">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Anthropic_logo.svg/2560px-Anthropic_logo.svg.png" alt="Claude MCP" class="expertise-image" style="object-fit: contain; padding: 40px; background: linear-gradient(135deg, #D4A574 0%, #B8860B 100%);">
+                    <div class="expertise-image">🤖</div>
                     <div class="expertise-content">
                         <h3>Model Context Protocol (MCP)</h3>
                         <p>Leverage Claude's MCP capabilities to build intelligent automation systems. Create custom tools and integrations that enhance AI-powered workflows for your business operations.</p>
@@ -477,7 +503,7 @@
                 </div>
 
                 <div class="expertise-card">
-                    <img src="https://www.gstatic.com/analytics-suite/header/suite/v2/ic_analytics.svg" alt="Data Integration" class="expertise-image" style="object-fit: contain; padding: 40px; background: linear-gradient(135deg, #4285F4 0%, #356ABC 100%);">
+                    <div class="expertise-image">📊</div>
                     <div class="expertise-content">
                         <h3>Multi-Platform Data Integration</h3>
                         <p>Unified dashboards combining Google Ads, Facebook Ads, Analytics, and CRM data. Build comprehensive reporting systems using Metabase, AWS Athena, and custom API integrations.</p>
@@ -485,7 +511,7 @@
                 </div>
 
                 <div class="expertise-card">
-                    <img src="https://www.hubspot.com/hubfs/HubSpot_Logos/HubSpot-Inversed-Favicon.png" alt="CRM Automation" class="expertise-image" style="object-fit: contain; padding: 40px; background: linear-gradient(135deg, #FF7A59 0%, #FF5C35 100%);">
+                    <div class="expertise-image">🔄</div>
                     <div class="expertise-content">
                         <h3>CRM & Operations Automation</h3>
                         <p>HubSpot workflows, ClickUp automation, and cross-platform integrations. Streamline client onboarding, task management, and team operations with intelligent automation.</p>
@@ -493,7 +519,7 @@
                 </div>
 
                 <div class="expertise-card">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/2560px-Amazon_Web_Services_Logo.svg.png" alt="Cloud Infrastructure" class="expertise-image" style="object-fit: contain; padding: 40px; background: linear-gradient(135deg, #FF9900 0%, #EC7211 100%);">
+                    <div class="expertise-image">☁️</div>
                     <div class="expertise-content">
                         <h3>Cloud Infrastructure & APIs</h3>
                         <p>AWS Lambda functions, API integrations, and scalable backend systems. Build reliable infrastructure that handles thousands of automated workflows daily.</p>
@@ -501,7 +527,7 @@
                 </div>
 
                 <div class="expertise-card">
-                    <img src="https://avatars.githubusercontent.com/u/109094989?s=280&v=4" alt="AI Integration" class="expertise-image" style="object-fit: contain; padding: 40px; background: linear-gradient(135deg, #10B981 0%, #059669 100%);">
+                    <div class="expertise-image">💬</div>
                     <div class="expertise-content">
                         <h3>AI-Powered Lead Qualification</h3>
                         <p>Voice and SMS automation using VAPI and Twilio. Build intelligent lead qualification systems that scale to hundreds of clients with seamless CRM integration.</p>
@@ -517,35 +543,35 @@
             <h2>Tools & Platforms</h2>
             <div class="tools-grid">
                 <div class="tool-item">
-                    <img src="https://docs.n8n.io/favicon.ico" alt="n8n">
+                    <div class="tool-icon">⚙️</div>
                     <div class="tool-name">n8n</div>
                 </div>
                 <div class="tool-item">
-                    <img src="https://www.hubspot.com/hubfs/HubSpot_Logos/HubSpot-Inversed-Favicon.png" alt="HubSpot">
+                    <div class="tool-icon">🎯</div>
                     <div class="tool-name">HubSpot</div>
                 </div>
                 <div class="tool-item">
-                    <img src="https://clickup.com/images/favicon.png" alt="ClickUp">
+                    <div class="tool-icon">✅</div>
                     <div class="tool-name">ClickUp</div>
                 </div>
                 <div class="tool-item">
-                    <img src="https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png" alt="Google Ads">
+                    <div class="tool-icon">📢</div>
                     <div class="tool-name">Google Ads API</div>
                 </div>
                 <div class="tool-item">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/yb/r/hLRJ1GG_y0J.ico" alt="Meta">
+                    <div class="tool-icon">📱</div>
                     <div class="tool-name">Meta Ads</div>
                 </div>
                 <div class="tool-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/2560px-Amazon_Web_Services_Logo.svg.png" alt="AWS" style="filter: invert(1);">
+                    <div class="tool-icon">☁️</div>
                     <div class="tool-name">AWS</div>
                 </div>
                 <div class="tool-item">
-                    <img src="https://www.metabase.com/images/logo.svg" alt="Metabase">
+                    <div class="tool-icon">📊</div>
                     <div class="tool-name">Metabase</div>
                 </div>
                 <div class="tool-item">
-                    <img src="https://supabase.com/favicon/favicon.ico" alt="Supabase">
+                    <div class="tool-icon">🗄️</div>
                     <div class="tool-name">Supabase</div>
                 </div>
             </div>
