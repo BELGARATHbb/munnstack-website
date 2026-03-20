@@ -536,58 +536,6 @@
         }
 
         /* ============================================
-           ABOUT — with animated border
-           ============================================ */
-        .about-header { margin-bottom: 64px; }
-        .about-content { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: start; }
-
-        .about-visual {
-            background: var(--bg-secondary); border: 1px solid var(--border);
-            border-radius: var(--radius-lg); padding: 40px; text-align: center;
-            position: relative; overflow: hidden;
-        }
-        .about-visual::before {
-            content: ''; position: absolute; inset: -2px;
-            background: conic-gradient(from 0deg, var(--accent), var(--accent-purple), var(--accent));
-            border-radius: var(--radius-lg); z-index: -1; opacity: 0;
-            transition: opacity 0.5s ease; animation: borderRotate 4s linear infinite;
-        }
-        .about-visual:hover::before { opacity: 0.5; }
-        @keyframes borderRotate {
-            to { transform: rotate(360deg); }
-        }
-
-        .about-initials {
-            width: 100px; height: 100px; border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-purple) 100%);
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto var(--space-md); font-size: 2rem; font-weight: 700; color: white;
-        }
-        .about-name { font-size: 1.35rem; font-weight: 700; margin-bottom: 4px; }
-        .about-role { color: var(--text-muted); font-size: 0.95rem; margin-bottom: var(--space-sm); }
-        .about-links { display: flex; justify-content: center; gap: 12px; }
-        .about-links a {
-            padding: 6px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm);
-            color: var(--text-secondary); text-decoration: none; font-size: 0.8rem;
-            transition: all 0.2s ease;
-        }
-        .about-links a:hover { border-color: var(--accent); color: var(--accent); }
-
-        .about-bio { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
-        .about-bio p { margin-bottom: var(--space-md); }
-        .about-bio strong { color: var(--text-primary); font-weight: 600; }
-
-        .about-highlights { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); margin-top: 32px; }
-        .about-highlight {
-            display: flex; align-items: center; gap: 12px;
-            font-size: 0.95rem; color: var(--text-secondary);
-            padding: 10px 14px; background: var(--bg-secondary); border-radius: var(--radius-sm);
-            border: 1px solid var(--border); transition: border-color 0.2s ease;
-        }
-        .about-highlight:hover { border-color: rgba(74, 158, 255, 0.2); }
-        .about-highlight svg { width: 20px; height: 20px; color: var(--accent); flex-shrink: 0; }
-
-        /* ============================================
            FAQ
            ============================================ */
         .faq-header { margin-bottom: 64px; }
@@ -752,8 +700,6 @@
             .tools-grid { grid-template-columns: repeat(4, 1fr); }
             .consultation-wrapper { grid-template-columns: 1fr; gap: 60px; }
             .form-container { max-width: 600px; }
-            .about-content { grid-template-columns: 1fr; gap: 40px; }
-            .about-visual { max-width: 300px; }
             .process-grid { grid-template-columns: repeat(3, 1fr); }
         }
 
@@ -778,7 +724,6 @@
             .solutions-grid { grid-template-columns: 1fr; }
             .process-grid { grid-template-columns: 1fr; gap: 40px; }
             .process-grid::before, .process-grid::after { display: none; }
-            .about-highlights { grid-template-columns: 1fr; }
             .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
             .scroll-indicator { display: none; }
             .hero-orb-2 { display: none; }
@@ -827,7 +772,6 @@
                         <a href="#expertise" class="nav-link" role="menuitem">Expertise</a>
                         <a href="#solutions" class="nav-link" role="menuitem">Solutions</a>
                         <a href="#tools" class="nav-link" role="menuitem">Stack</a>
-                        <a href="#about" class="nav-link" role="menuitem">About</a>
                         <a href="#faq" class="nav-link" role="menuitem">FAQ</a>
                     </div>
                     <a href="#consultation" class="nav-cta">Get Started</a>
@@ -1167,48 +1111,6 @@
             </div>
         </section>
 
-        <!-- About -->
-        <section class="about" id="about">
-            <div class="container">
-                <div class="about-header">
-                    <p class="section-label">About</p>
-                    <h2 class="section-title">Who's Behind MunnStack</h2>
-                </div>
-                <div class="about-content">
-                    <div class="about-visual">
-                        <div class="about-initials">CM</div>
-                        <p class="about-name">Christopher Munn</p>
-                        <p class="about-role">Founder & Lead Consultant</p>
-                        <div class="about-links">
-                            <a href="mailto:chris@munnstack.com">Email</a>
-                        </div>
-                    </div>
-                    <div class="about-bio">
-                        <p>I spent <strong>4+ years running operations</strong> for a digital marketing agency, managing 300+ client accounts across Google Ads, Meta, HubSpot, and a dozen other platforms. I saw firsthand how much time gets burned on manual data entry, cross-platform reporting, and repetitive campaign management.</p>
-                        <p>So I started automating everything. <strong>n8n workflows</strong> that replaced 3-hour daily reporting with a single button click. <strong>AWS data pipelines</strong> that unified ad spend across every platform into queryable Athena tables. <strong>AI-powered lead qualification</strong> that handled hundreds of inbound leads without a human touching them.</p>
-                        <p>Now I help operations leaders do the same. Whether you need a single workflow or a complete automation overhaul, I build systems that <strong>actually work in production</strong> — not demos that break on day two. Every system ships with error handling, monitoring, documentation, and the kind of reliability you need when real money flows through it.</p>
-                        <div class="about-highlights">
-                            <div class="about-highlight">
-                                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>300+ client accounts managed</span>
-                            </div>
-                            <div class="about-highlight">
-                                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>40+ platform integrations built</span>
-                            </div>
-                            <div class="about-highlight">
-                                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>n8n, AWS, Claude MCP expert</span>
-                            </div>
-                            <div class="about-highlight">
-                                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>Production-first, every time</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- FAQ -->
         <section class="faq" id="faq">
