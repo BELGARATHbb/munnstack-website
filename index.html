@@ -107,7 +107,7 @@
             overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
         }
 
-        .container { max-width: 1600px; margin: 0 auto; padding: 0 var(--space-lg); }
+        .container { max-width: 1920px; margin: 0 auto; padding: 0 60px; }
 
         .tag {
             display: inline-block;
@@ -172,13 +172,14 @@
         }
 
         .header-inner { display: flex; justify-content: space-between; align-items: center; }
-        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-        .logo-img { height: 40px; width: auto; }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-right: auto; }
+        .logo-img { height: 64px; width: auto; }
 
-        .nav-links { display: flex; gap: var(--space-md); align-items: center; }
+        .nav-links { display: flex; gap: 40px; align-items: center; }
         .nav-link {
-            font-size: 0.9rem; color: var(--text-secondary); text-decoration: none;
-            transition: color 0.2s ease; padding: 8px 4px; position: relative;
+            font-size: 1.05rem; color: var(--text-secondary); text-decoration: none;
+            transition: color 0.2s ease; padding: 10px 4px; position: relative;
+            font-weight: 500; letter-spacing: 0.01em;
         }
         .nav-link::after {
             content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
@@ -188,10 +189,10 @@
         .nav-link:hover::after { width: 100%; }
 
         .nav-cta {
-            padding: 12px 24px; background: var(--accent); color: var(--bg-primary);
+            padding: 14px 32px; background: var(--accent); color: var(--bg-primary);
             text-decoration: none; border-radius: var(--radius-sm); font-weight: 600;
-            font-size: 0.9rem; transition: all 0.2s ease;
-            min-height: 44px; display: inline-flex; align-items: center;
+            font-size: 1rem; transition: all 0.2s ease;
+            min-height: 48px; display: inline-flex; align-items: center; margin-left: 20px;
         }
         .nav-cta:hover { background: var(--accent-bright); transform: translateY(-1px); }
 
@@ -258,7 +259,7 @@
             background-size: 40px 40px; pointer-events: none;
         }
 
-        .hero-content { position: relative; z-index: 1; max-width: 900px; }
+        .hero-content { position: relative; z-index: 1; max-width: 1100px; }
 
         .hero-label {
             display: inline-block; padding: var(--space-xs) var(--space-sm);
@@ -288,7 +289,7 @@
         }
 
         .hero-description {
-            font-size: 1.25rem; color: var(--text-secondary); max-width: 720px;
+            font-size: 1.25rem; color: var(--text-secondary); max-width: 860px;
             margin-bottom: var(--space-lg); line-height: 1.7;
             animation: fadeUp 0.6s ease 0.2s both;
         }
@@ -347,7 +348,7 @@
             letter-spacing: -0.02em; margin-bottom: 20px;
         }
         .section-description {
-            font-size: 1.1rem; color: var(--text-secondary); max-width: 750px; line-height: 1.7;
+            font-size: 1.1rem; color: var(--text-secondary); max-width: 900px; line-height: 1.7;
         }
 
         /* ============================================
@@ -590,7 +591,7 @@
            FAQ
            ============================================ */
         .faq-header { margin-bottom: 64px; }
-        .faq-grid { max-width: 1000px; display: flex; flex-direction: column; gap: 12px; }
+        .faq-grid { max-width: 1200px; display: flex; flex-direction: column; gap: 12px; }
         .faq-item {
             background: var(--bg-secondary); border: 1px solid var(--border);
             border-radius: var(--radius-md); overflow: hidden; transition: border-color 0.2s ease;
@@ -820,7 +821,7 @@
             <nav aria-label="Main navigation">
                 <div class="header-inner">
                     <a href="/" class="logo" aria-label="MunnStack - Home">
-                        <img src="munnstack-logo-dark-highres.png" alt="MunnStack" class="logo-img" width="200" height="40" fetchpriority="high">
+                        <img src="munnstack-logo-dark-highres.png" alt="MunnStack" class="logo-img" width="320" height="64" fetchpriority="high">
                     </a>
                     <div class="nav-links" id="navLinks" role="menubar">
                         <a href="#expertise" class="nav-link" role="menuitem">Expertise</a>
