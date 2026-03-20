@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MunnStack - AI & Automation Consulting</title>
-    <meta name="description" content="MunnStack delivers AI and automation consulting for operations leaders. We design production-grade systems using n8n, AWS, HubSpot, and Claude MCP that eliminate bottlenecks and scale your business.">
+    <title>MunnStack - AI & Operations Consulting</title>
+    <meta name="description" content="MunnStack delivers AI and operations consulting for teams that move fast. Production-grade systems using n8n, AWS, HubSpot, and Claude MCP that eliminate manual work and create operational leverage.">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0a0a0b">
     <link rel="canonical" href="https://munnstack.com/">
@@ -12,15 +12,15 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://munnstack.com/">
-    <meta property="og:title" content="MunnStack - AI & Automation Consulting">
-    <meta property="og:description" content="Strategic automation consulting for operations leaders. Production-grade systems that eliminate bottlenecks and create operational leverage.">
+    <meta property="og:title" content="MunnStack - AI & Operations Consulting">
+    <meta property="og:description" content="AI & operations consulting. Production-grade systems that eliminate manual work and create operational leverage.">
     <meta property="og:image" content="https://munnstack.com/og-image.png">
     <meta property="og:site_name" content="MunnStack">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MunnStack - AI & Automation Consulting">
-    <meta name="twitter:description" content="Strategic automation consulting for operations leaders.">
+    <meta name="twitter:title" content="MunnStack - AI & Operations Consulting">
+    <meta name="twitter:description" content="AI & operations consulting for teams that move fast.">
     <meta name="twitter:image" content="https://munnstack.com/og-image.png">
 
     <!-- Content Security Policy -->
@@ -33,13 +33,13 @@
         "@type": "ProfessionalService",
         "name": "MunnStack LLC",
         "url": "https://munnstack.com",
-        "description": "AI & Automation Consulting for operations leaders",
+        "description": "AI & Operations Consulting for teams that move fast",
         "email": "chris@munnstack.com",
         "founder": {
             "@type": "Person",
             "name": "Christopher Munn"
         },
-        "serviceType": ["Automation Consulting", "AI Integration", "Workflow Automation", "Data Integration"],
+        "serviceType": ["Operations Consulting", "AI Integration", "Workflow Operations", "Data Integration"],
         "areaServed": "US",
         "priceRange": "$$"
     }
@@ -338,7 +338,7 @@
         /* ============================================
            SECTIONS (shared)
            ============================================ */
-        section { padding: var(--space-2xl) 0; scroll-margin-top: 80px; }
+        section { padding: 90px 0; scroll-margin-top: 80px; }
         .section-label {
             font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
             letter-spacing: 0.15em; color: var(--accent); margin-bottom: var(--space-sm);
@@ -376,42 +376,6 @@
             font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;
             opacity: 0.7; font-style: italic;
         }
-
-        /* ============================================
-           EXPERTISE — with glow cards + tags
-           ============================================ */
-        .expertise-header { margin-bottom: 64px; }
-        .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
-
-        .expertise-card {
-            background: var(--bg-secondary); border: 1px solid var(--border);
-            border-radius: var(--radius-lg); padding: 36px;
-            transition: all 0.4s ease; position: relative; overflow: hidden;
-        }
-        .expertise-card::after {
-            content: ''; position: absolute; inset: 0;
-            background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-                        rgba(74, 158, 255, 0.06), transparent 40%);
-            opacity: 0; transition: opacity 0.4s ease; pointer-events: none;
-        }
-        .expertise-card:hover {
-            border-color: rgba(74, 158, 255, 0.3); transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2), 0 0 40px rgba(74, 158, 255, 0.05);
-        }
-        .expertise-card:hover::after { opacity: 1; }
-
-        .expertise-icon {
-            width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;
-            background: rgba(74, 158, 255, 0.1); border-radius: var(--radius-md);
-            margin-bottom: var(--space-md); transition: all 0.3s ease;
-        }
-        .expertise-card:hover .expertise-icon {
-            background: rgba(74, 158, 255, 0.2);
-            box-shadow: 0 0 20px rgba(74, 158, 255, 0.15);
-        }
-        .expertise-icon svg { width: 24px; height: 24px; color: var(--accent); }
-        .expertise-card h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; }
-        .expertise-card p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; }
 
         /* ============================================
            TOOLS — with glow hover
@@ -491,57 +455,16 @@
         }
 
         /* ============================================
-           HOW IT WORKS — with connecting lines
+           FAQ
            ============================================ */
-        .process {
+        .faq {
             background: var(--bg-secondary);
             border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
         }
-        .process-header { text-align: center; margin-bottom: 64px; }
-        .process-header .section-description { margin: 0 auto; }
-        .process-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-md); position: relative;
-        }
-
-        /* Connecting lines between steps */
-        .process-grid::before, .process-grid::after {
-            content: ''; position: absolute; top: 28px; height: 2px;
-            background: linear-gradient(90deg, transparent, rgba(74, 158, 255, 0.3), transparent);
-            z-index: 0;
-        }
-        .process-grid::before { left: 17%; right: 50%; }
-        .process-grid::after { left: 50%; right: 17%; }
-
-        .process-step {
-            text-align: center; padding: 0 var(--space-md); position: relative; z-index: 1;
-        }
-        .step-number {
-            width: 56px; height: 56px; border-radius: 50%;
-            background: var(--bg-secondary); border: 2px solid rgba(74, 158, 255, 0.3);
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 20px; font-size: 1.25rem; font-weight: 700;
-            color: var(--accent); transition: all 0.3s ease;
-            box-shadow: 0 0 0 0 rgba(74, 158, 255, 0);
-        }
-        .process-step:hover .step-number {
-            border-color: var(--accent); background: rgba(74, 158, 255, 0.1);
-            box-shadow: 0 0 20px rgba(74, 158, 255, 0.2);
-        }
-        .process-step h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; }
-        .process-step > p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; }
-        .process-detail {
-            margin-top: 16px; font-size: 0.8rem; color: var(--text-muted);
-            font-style: italic; line-height: 1.5;
-        }
-
-        /* ============================================
-           FAQ
-           ============================================ */
         .faq-header { margin-bottom: 64px; }
         .faq-grid { max-width: 1200px; display: flex; flex-direction: column; gap: 12px; }
         .faq-item {
-            background: var(--bg-secondary); border: 1px solid var(--border);
+            background: var(--bg-tertiary); border: 1px solid var(--border);
             border-radius: var(--radius-md); overflow: hidden; transition: border-color 0.2s ease;
         }
         .faq-item:hover { border-color: rgba(74, 158, 255, 0.2); }
@@ -646,6 +569,12 @@
         footer { padding: 60px 0; border-top: 1px solid var(--border); }
         .footer-inner { display: flex; justify-content: space-between; align-items: center; }
         .footer-text { font-size: 0.9rem; color: var(--text-muted); }
+        .footer-nav { display: flex; gap: 32px; }
+        .footer-nav a {
+            font-size: 0.9rem; color: var(--text-secondary); text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .footer-nav a:hover { color: var(--accent); }
         .footer-links { display: flex; gap: var(--space-md); font-style: normal; }
         .footer-links a {
             font-size: 0.9rem; color: var(--text-secondary); text-decoration: none;
@@ -696,11 +625,9 @@
            RESPONSIVE — 1024px
            ============================================ */
         @media (max-width: 1024px) {
-            .expertise-grid { grid-template-columns: repeat(2, 1fr); }
             .tools-grid { grid-template-columns: repeat(4, 1fr); }
             .consultation-wrapper { grid-template-columns: 1fr; gap: 60px; }
             .form-container { max-width: 600px; }
-            .process-grid { grid-template-columns: repeat(3, 1fr); }
         }
 
         /* ============================================
@@ -719,11 +646,8 @@
             .nav-links .nav-link { padding: 14px var(--space-md); font-size: 1rem; }
             .nav-toggle { display: flex; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
-            .expertise-grid { grid-template-columns: 1fr; }
             .tools-grid { grid-template-columns: repeat(2, 1fr); }
             .solutions-grid { grid-template-columns: 1fr; }
-            .process-grid { grid-template-columns: 1fr; gap: 40px; }
-            .process-grid::before, .process-grid::after { display: none; }
             .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
             .scroll-indicator { display: none; }
             .hero-orb-2 { display: none; }
@@ -769,7 +693,6 @@
                         <img src="munnstack-logo-dark-highres.png" alt="MunnStack" class="logo-img" width="320" height="64" fetchpriority="high">
                     </a>
                     <div class="nav-links" id="navLinks" role="menubar">
-                        <a href="#expertise" class="nav-link" role="menuitem">Expertise</a>
                         <a href="#solutions" class="nav-link" role="menuitem">Solutions</a>
                         <a href="#tools" class="nav-link" role="menuitem">Stack</a>
                         <a href="#faq" class="nav-link" role="menuitem">FAQ</a>
@@ -792,9 +715,9 @@
             <div class="hero-grid" aria-hidden="true"></div>
             <div class="container">
                 <div class="hero-content">
-                    <span class="hero-label">AI & Automation Consulting</span>
-                    <h1>Build systems that <span class="accent">scale your business</span></h1>
-                    <p class="hero-description">We design and deploy production-grade automation for operations leaders. n8n workflows, AI integrations, data pipelines, and unified dashboards — systems that eliminate hours of manual work and create real operational leverage.</p>
+                    <span class="hero-label">AI & Operations Consulting</span>
+                    <h1>We run the operations <span class="accent">your team shouldn't have to</span></h1>
+                    <p class="hero-description">AI-powered workflows, data pipelines, and unified dashboards that replace hours of manual ops work. We build production-grade systems so your team can focus on strategy, not spreadsheets.</p>
                     <a href="#consultation" class="hero-cta">
                         Book Free Consultation
                         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -830,115 +753,11 @@
                         <p class="stat-context">APIs, CRMs & ad platforms</p>
                     </div>
                     <div class="stat-item animate-on-scroll">
-                        <dt class="stat-label">Hours Automated Monthly</dt>
+                        <dt class="stat-label">Hours Saved Monthly</dt>
                         <dd class="stat-number" data-target="1000" data-suffix="s">0</dd>
-                        <p class="stat-context">Of manual work eliminated</p>
+                        <p class="stat-context">Of manual ops work eliminated</p>
                     </div>
                 </dl>
-            </div>
-        </section>
-
-        <!-- Expertise -->
-        <section class="expertise" id="expertise">
-            <div class="container">
-                <div class="expertise-header">
-                    <p class="section-label">Expertise</p>
-                    <h2 class="section-title">What We Specialize In</h2>
-                    <p class="section-description">Deep technical expertise across the modern automation stack, with a focus on production-ready implementations that survive real-world traffic and edge cases.</p>
-                </div>
-                <div class="expertise-grid">
-                    <div class="expertise-card animate-on-scroll">
-                        <div class="expertise-icon">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v10M1 12h6m6 0h10"/>
-                                <path d="M4.22 4.22l4.24 4.24m7.08 7.08l4.24 4.24M4.22 19.78l4.24-4.24m7.08-7.08l4.24-4.24"/>
-                            </svg>
-                        </div>
-                        <h3>n8n Workflow Automation</h3>
-                        <p>Complex, multi-step automation workflows connecting your entire tech stack. From lead capture to CRM enrichment to Slack notifications — we build production-grade n8n implementations that handle thousands of executions daily without breaking.</p>
-                        <div class="tags">
-                            <span class="tag">n8n</span>
-                            <span class="tag">Webhooks</span>
-                            <span class="tag">REST APIs</span>
-                            <span class="tag">Error Handling</span>
-                        </div>
-                    </div>
-                    <div class="expertise-card animate-on-scroll">
-                        <div class="expertise-icon">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/>
-                            </svg>
-                        </div>
-                        <h3>Model Context Protocol</h3>
-                        <p>Leverage Claude's MCP capabilities for intelligent, context-aware automation. Custom tool servers, database integrations, and workflow orchestration that let AI agents interact with your real business systems — not just chat.</p>
-                        <div class="tags">
-                            <span class="tag purple">Claude MCP</span>
-                            <span class="tag purple">Tool Servers</span>
-                            <span class="tag purple">Agent SDK</span>
-                        </div>
-                    </div>
-                    <div class="expertise-card animate-on-scroll">
-                        <div class="expertise-icon">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/>
-                            </svg>
-                        </div>
-                        <h3>Multi-Platform Data Integration</h3>
-                        <p>Unified reporting combining Google Ads, Meta Ads, Analytics, Search Console, and CRM data into a single source of truth. Custom ETL pipelines feeding Metabase dashboards and AWS Athena for SQL-based analysis at any scale.</p>
-                        <div class="tags">
-                            <span class="tag">AWS Athena</span>
-                            <span class="tag">Metabase</span>
-                            <span class="tag">S3</span>
-                            <span class="tag">ETL</span>
-                        </div>
-                    </div>
-                    <div class="expertise-card animate-on-scroll">
-                        <div class="expertise-icon">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-                            </svg>
-                        </div>
-                        <h3>CRM & Operations Automation</h3>
-                        <p>HubSpot workflow design, ClickUp task automation, and cross-platform integrations that keep your tools in sync. Automated onboarding sequences, deal pipeline management, and team notification systems that run 24/7.</p>
-                        <div class="tags">
-                            <span class="tag">HubSpot</span>
-                            <span class="tag">ClickUp</span>
-                            <span class="tag">Pipelines</span>
-                            <span class="tag">Webhooks</span>
-                        </div>
-                    </div>
-                    <div class="expertise-card animate-on-scroll">
-                        <div class="expertise-icon">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                            </svg>
-                        </div>
-                        <h3>Cloud Infrastructure & APIs</h3>
-                        <p>AWS Lambda functions, S3 data lakes, API gateway design, and scalable backend services. We build the infrastructure layer that powers your automation — designed to handle traffic spikes, retry failed jobs, and alert when things need attention.</p>
-                        <div class="tags">
-                            <span class="tag">AWS Lambda</span>
-                            <span class="tag">S3</span>
-                            <span class="tag">APIs</span>
-                            <span class="tag green">Python</span>
-                        </div>
-                    </div>
-                    <div class="expertise-card animate-on-scroll">
-                        <div class="expertise-icon">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                        </div>
-                        <h3>AI-Powered Lead Qualification</h3>
-                        <p>Intelligent voice and SMS automation with VAPI and Twilio. Leads get qualified instantly via AI conversation, scored based on your criteria, enriched with business data, and routed to the right rep — all before a human touches it.</p>
-                        <div class="tags">
-                            <span class="tag">VAPI</span>
-                            <span class="tag">Twilio</span>
-                            <span class="tag purple">AI Scoring</span>
-                            <span class="tag">CRM Sync</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -948,7 +767,7 @@
                 <div class="tools-header">
                     <p class="section-label">Tech Stack</p>
                     <h2 class="section-title">Tools & Platforms</h2>
-                    <p class="section-description">Battle-tested expertise across the modern automation ecosystem. We don't just use these tools — we push them to their limits.</p>
+                    <p class="section-description">Battle-tested expertise across the modern operations stack.</p>
                 </div>
                 <div class="tools-grid">
                     <div class="tool-card animate-on-scroll">
@@ -1001,7 +820,7 @@
                 <div class="solutions-header">
                     <p class="section-label">Solutions</p>
                     <h2 class="section-title">What We Build</h2>
-                    <p class="section-description">Production-ready automation systems designed for scale, reliability, and measurable ROI. Here's what a typical engagement looks like.</p>
+                    <p class="section-description">Production-ready operational systems designed for scale, reliability, and measurable ROI.</p>
                 </div>
                 <div class="solutions-grid">
                     <div class="solution-card animate-on-scroll">
@@ -1030,18 +849,6 @@
                     </div>
                     <div class="solution-card animate-on-scroll">
                         <span class="solution-number">03</span>
-                        <h3>Client Onboarding Automations</h3>
-                        <p>End-to-end onboarding workflows that eliminate manual setup, track progress, and ensure consistent delivery for every client.</p>
-                        <ul class="solution-details">
-                            <li>Intake form to CRM to project board pipeline</li>
-                            <li>Automated account access provisioning</li>
-                            <li>Progress tracking with stakeholder notifications</li>
-                            <li>Checklist-driven QA before go-live</li>
-                        </ul>
-                        <span class="solution-metric">Onboarding time reduced 70%</span>
-                    </div>
-                    <div class="solution-card animate-on-scroll">
-                        <span class="solution-number">04</span>
                         <h3>Multi-Platform Data Syncs</h3>
                         <p>Keep your tools in sync automatically. CRM, project management, analytics, and advertising platforms all talking to each other in real time.</p>
                         <ul class="solution-details">
@@ -1053,21 +860,9 @@
                         <span class="solution-metric">Zero manual data entry</span>
                     </div>
                     <div class="solution-card animate-on-scroll">
-                        <span class="solution-number">05</span>
-                        <h3>Campaign Management Automation</h3>
-                        <p>Automated Google Ads campaign builds, geo-targeting setup, budget pacing, and performance optimization workflows at scale.</p>
-                        <ul class="solution-details">
-                            <li>Bulk campaign creation from spreadsheet specs</li>
-                            <li>Dynamic budget pacing with daily rebalancing</li>
-                            <li>Geo-fence configuration across 100+ locations</li>
-                            <li>Automated pause/enable based on performance rules</li>
-                        </ul>
-                        <span class="solution-metric">300+ campaigns managed</span>
-                    </div>
-                    <div class="solution-card animate-on-scroll">
-                        <span class="solution-number">06</span>
+                        <span class="solution-number">04</span>
                         <h3>Operations Workflows</h3>
-                        <p>Time tracking, task scheduling, team coordination, and reporting automation for operational efficiency gains across your organization.</p>
+                        <p>Time tracking, task scheduling, team coordination, and reporting systems for operational efficiency gains across your organization.</p>
                         <ul class="solution-details">
                             <li>Automated standup summaries from project boards</li>
                             <li>Time-based task escalation and reassignment</li>
@@ -1080,38 +875,6 @@
             </div>
         </section>
 
-        <!-- How It Works -->
-        <section class="process" id="process">
-            <div class="container">
-                <div class="process-header">
-                    <p class="section-label">How It Works</p>
-                    <h2 class="section-title">Three Steps to Automation</h2>
-                    <p class="section-description">From first conversation to production-ready systems. No fluff, no six-month discovery phases — just clear, structured execution.</p>
-                </div>
-                <div class="process-grid">
-                    <div class="process-step animate-on-scroll">
-                        <div class="step-number">1</div>
-                        <h3>Discovery Call</h3>
-                        <p>Free 30-minute consultation where we map your current workflows, identify the biggest time sinks, and define what success looks like for your team.</p>
-                        <p class="process-detail">You'll walk away with a clear understanding of what's automatable and what's not — even if you don't hire us.</p>
-                    </div>
-                    <div class="process-step animate-on-scroll">
-                        <div class="step-number">2</div>
-                        <h3>Custom Roadmap</h3>
-                        <p>Within a week, you receive a prioritized automation roadmap with ROI estimates, implementation timeline, and a phased plan tailored to your specific stack and budget.</p>
-                        <p class="process-detail">We rank every automation by effort vs. impact so you know exactly where to start for the biggest wins.</p>
-                    </div>
-                    <div class="process-step animate-on-scroll">
-                        <div class="step-number">3</div>
-                        <h3>Build & Deploy</h3>
-                        <p>We build, test, and deploy production-grade systems in 2-4 week sprints. Each sprint delivers working automation you can use immediately, with documentation and ongoing support.</p>
-                        <p class="process-detail">Includes error monitoring, retry logic, and alerting — so things don't silently break at 2am.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
         <!-- FAQ -->
         <section class="faq" id="faq">
             <div class="container">
@@ -1122,11 +885,11 @@
                 <div class="faq-grid">
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
-                            How much does a typical automation project cost?
+                            How much does a typical project cost?
                             <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
                         </button>
                         <div class="faq-answer"><div class="faq-answer-inner">
-                            Projects typically range from $2,000 for a single workflow to $10,000+ for a full automation system. The discovery call is free and you'll get a detailed quote before any work begins. Most clients start with one high-impact automation and expand from there.
+                            $2,000 for a single workflow up to $10,000+ for a full system. Free discovery call, detailed quote before any work begins.
                         </div></div>
                     </div>
                     <div class="faq-item">
@@ -1135,7 +898,7 @@
                             <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
                         </button>
                         <div class="faq-answer"><div class="faq-answer-inner">
-                            A single workflow typically takes 1-2 weeks. Larger systems with multiple integrations run 2-6 weeks depending on complexity. We work in sprints, so you get working automation at the end of each sprint — not everything at the end of a long project.
+                            Single workflows take 1-2 weeks. Larger systems run 2-6 weeks. We work in sprints — you get working systems at the end of each one.
                         </div></div>
                     </div>
                     <div class="faq-item">
@@ -1144,16 +907,16 @@
                             <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
                         </button>
                         <div class="faq-answer"><div class="faq-answer-inner">
-                            Yes. Every system includes monitoring and alerting out of the box. For ongoing support, we offer monthly retainer packages that cover maintenance, updates, and new automation builds as your needs grow. Most clients find that once systems are deployed, they need very little hands-on maintenance.
+                            Every system ships with monitoring and alerting. We offer monthly retainers for ongoing maintenance and new builds as your needs grow.
                         </div></div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
-                            What if we already have some automations in place?
+                            What if we already have some systems in place?
                             <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
                         </button>
                         <div class="faq-answer"><div class="faq-answer-inner">
-                            Great — we'll audit what you have, identify what's working and what's fragile, and build on top of your existing infrastructure. No need to rip and replace. We regularly inherit n8n workflows, Zapier zaps, and custom scripts, then optimize and extend them into more robust systems.
+                            We audit what you have, identify what's working and what's fragile, and build on top. No rip-and-replace — we optimize and extend your existing systems.
                         </div></div>
                     </div>
                     <div class="faq-item">
@@ -1162,7 +925,7 @@
                             <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
                         </button>
                         <div class="faq-answer"><div class="faq-answer-inner">
-                            We specialize in digital marketing agencies, SaaS companies, and operations-heavy businesses. If your team spends significant time on manual data work, cross-platform reporting, or lead management, we can help — regardless of industry. The automation patterns are remarkably similar across verticals.
+                            Marketing agencies, SaaS companies, and operations-heavy businesses. If your team spends time on manual data work or cross-platform reporting, we can help.
                         </div></div>
                     </div>
                 </div>
@@ -1175,16 +938,16 @@
                 <div class="consultation-wrapper">
                     <div class="consultation-content">
                         <p class="section-label">Get Started</p>
-                        <h2 class="section-title">Let's Talk Automation</h2>
-                        <p class="section-description">Book a free 30-minute consultation to discuss your automation challenges and explore what's possible. No pitch, no pressure — just an honest assessment of where automation can (and can't) help.</p>
+                        <h2 class="section-title">Let's Talk Operations</h2>
+                        <p class="section-description">Book a free 30-minute consultation. No pitch, no pressure — just an honest look at where AI and better systems can save your team real time.</p>
                         <div class="consultation-features">
                             <div class="feature-item">
                                 <svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span class="feature-text"><strong>Free 30-minute strategy session</strong> — we map your workflows and identify quick wins</span>
+                                <span class="feature-text"><strong>Free 30-minute strategy session</strong> — we map your workflows and find quick wins</span>
                             </div>
                             <div class="feature-item">
                                 <svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span class="feature-text"><strong>Custom automation roadmap</strong> — prioritized by ROI with clear timelines</span>
+                                <span class="feature-text"><strong>Custom operations roadmap</strong> — prioritized by ROI with clear timelines</span>
                             </div>
                             <div class="feature-item">
                                 <svg aria-hidden="true" class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1237,6 +1000,12 @@
         <div class="container">
             <div class="footer-inner">
                 <p class="footer-text"></p>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="#solutions">Solutions</a>
+                    <a href="#tools">Stack</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#consultation">Contact</a>
+                </nav>
                 <address class="footer-links">
                     <a href="mailto:chris@munnstack.com">chris@munnstack.com</a>
                 </address>
@@ -1312,15 +1081,6 @@
         }, { threshold: 0.3 });
         var statsGrid = document.querySelector('.stats-grid');
         if (statsGrid) statObserver.observe(statsGrid);
-
-        // Card glow follow mouse
-        document.querySelectorAll('.expertise-card').forEach(function (card) {
-            card.addEventListener('mousemove', function (e) {
-                var rect = card.getBoundingClientRect();
-                card.style.setProperty('--mouse-x', (e.clientX - rect.left) + 'px');
-                card.style.setProperty('--mouse-y', (e.clientY - rect.top) + 'px');
-            });
-        });
 
         // FAQ accordion
         document.querySelectorAll('.faq-question').forEach(function (btn) {
